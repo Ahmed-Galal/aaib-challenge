@@ -1,0 +1,10 @@
+.DS_Store
+.dockerignore
+.idea/
+.vscode/
+**/node_modules
+data
+yarn.lock
+
+consumer/node_modules
+publisher/node_modules

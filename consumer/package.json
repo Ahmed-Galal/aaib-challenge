@@ -1,0 +1,19 @@
+{
+  "name": "consumer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "(cp ./env/env.config.dev.js ./config/env.config.js) && node server.js",
+    "prod": "(cp ./env/env.config.prod.js ./config/env.config.js) && node server.js"
+  },
+  "author": "Ahmed Galal",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "axios": "^0.22.0",
+    "redis": "^4.0.0-rc.2"
+  }
+}

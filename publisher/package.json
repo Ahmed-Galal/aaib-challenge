@@ -1,0 +1,25 @@
+{
+  "name": "publisher",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha",
+    "start": "node server.js",
+    "dev": "(cp ./env/env.config.dev.js ./config/env.config.js) && node server.js",
+    "prod": "(cp ./env/env.config.prod.js ./config/env.config.js) && node server.js"
+  },
+  "author": "Ahmed Galal",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "axios": "^0.21.4",
+    "express": "^4.17.1",
+    "joi": "^17.4.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  }
+}

@@ -1,0 +1,35 @@
+version: '2'
+services:
+  consumer:
+    build: ./consumer
+    container_name: consumer
+    restart: always
+    ports:
+      - "5672:5672"
+    depends_on:
+      - rabbitmq
+      - redis
+
+  publisher:
+    build: ./publisher
+    container_name: publisher
+    restart: always
+    depends_on:
+      - rabbitmq
+
+  nginx:
+    container_name: nginx
+    restart: always
+    build: ./nginx/
+    ports:
+      - "80:80"
+
+  redis:
+      image: redis:buster
+      container_name: redis
+      restart: always
+
+  rabbitmq:
+    image: 'rabbitmq:3-management-alpine'
+    container_name: rabbitmq
+    restart: always
